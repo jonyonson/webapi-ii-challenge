@@ -1,0 +1,26 @@
+.App {
+  margin: 50px;
+}
+
+.App-post {
+  width: 60%;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom:20px;
+}
+
+
+.App-post-title {
+  margin-bottom: 15px;
+}
