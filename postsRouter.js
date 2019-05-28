@@ -26,7 +26,13 @@ router.post('/:id/comments', (req, res) => {
   comment.post_id = id;
   db.insertComment(comment)
     .then(post => {
-      res.status(201).json(comment);
+      if (!comment.text) {
+        res.status(404).json({
+          message: 'Please provide text for the comment',
+        });
+      } else {
+        res.status(201).json(comment);
+      }
     })
     .catch(err => {
       res.status(500).json({
